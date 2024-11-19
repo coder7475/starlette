@@ -6,11 +6,11 @@ from starlette.routing import Route
 async def homepage(request):
     return JSONResponse({'hello': 'world'})
 
-async def app(scope, receive, send):
-    assert scope['type'] == 'http'
-    response = PlainTextResponse('Hello, Plain!')
-    await response(scope, receive, send)
+# async def app(scope, receive, send):
+#     assert scope['type'] == 'http'
+#     response = PlainTextResponse('Hello, Plain!')
+#     await response(scope, receive, send)
 
-# app = Starlette(debug=True, routes=[
-#     Route('/', homepage)
-# ])
+app = Starlette(debug=True, routes=[
+    Route('/', homepage)
+])
