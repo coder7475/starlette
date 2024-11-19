@@ -1,2 +1,2 @@
-uvicorn
-starlette
+uvicorn[full]
+starlette[full]
